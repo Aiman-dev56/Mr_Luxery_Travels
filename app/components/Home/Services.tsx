@@ -13,7 +13,7 @@ export default function Services() {
             <div className="max-w-[700px] mb-10">
                 <Typography variant="h2">Services</Typography>
 
-                <Typography variant="p" className="lg:w-140 w-100">
+                <Typography variant="p" className="lg:w-140 2xl:w-200 md:w-100 w-64">
                     MRLUXURYTRAVELS is dedicated to providing the ultimate lifestyle
                     service, guiding you through the ever-changing world of luxury,
                     making every moment a memory. Whether you require assistance with

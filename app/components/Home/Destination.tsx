@@ -105,7 +105,7 @@ export default function Destinations() {
                     <div className="flex flex-col md:flex-row md:items-end justify-between px-6 lg:px-12 mb-10 gap-6">
                         <div className="2xl:w-[940px] lg:w-[700px] ">
                             <Typography variant="h2">Destinations</Typography>
-                            <Typography variant="p" className="!text-para lg:w-140 w-100">
+                            <Typography variant="p" className="!text-para lg:w-140 2xl:w-200 md:w-100 w-64">
                                 MRLUXURYTRAVELS is dedicated to providing the ultimate lifestyle service, guiding you through the ever-changing world of luxury, making every moment a memory. Whether you require assistance with your day-to-day life or your lifelong dreams, the MRLUXURYTRAVELS team are experts in all things luxury
                             </Typography>
                         </div>

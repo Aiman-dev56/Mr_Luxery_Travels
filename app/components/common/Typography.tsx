@@ -23,7 +23,7 @@ const tags: Record<Variant, ElementType> = {
 
 const sizes: Record<Variant, string> = {
     h1: "2xl:text-[200px] lg:text-[110px] md:text-[80px] sm:text-[60px] text-[50px] leading-none text-secondary first-letter:uppercase  font-semibold",
-    h2: "2xl:text-[100px] lg:text-[60px] leading-none text-primary md:text-[60px] sm:text-[50px] text-[40px] first-letter:uppercase ",
+    h2: "2xl:text-[100px] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[34px] leading-none text-primary first-letter:uppercase ",
     h3: "lg:text-2xl  text-xl first-letter:uppercase font-medium",
     h4: "2xl:text-[40px] lg:text-[30px] text-xl text-secondary first-letter:uppercase ",
     h6: "lg:text-[24px] 2xl:text-[34px] text-primary ",

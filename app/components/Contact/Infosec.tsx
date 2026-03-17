@@ -9,51 +9,69 @@ import { CiLocationOn } from "react-icons/ci";
 export default function InfoSec() {
     return (
         <>
-            <section className="container">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-18">
-                    <div className="flex flex-col lg:ml-40 mt-8">
-                        <Typography variant="h2" className="w-60">Contact Us Today</Typography>
-                        <Typography variant="h6">To Start Your Journey Of A Lifetime</Typography>
-                        <Typography variant="p" className="w-100">Step into a world of curated elegance, seamless service, and unforgettable destinations</Typography>
+            <section className="container mx-auto px-4 mt-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                    {/* LEFT CONTENT */}
+                    <div className="flex flex-col gap-4 max-w-xl">
+                        <Typography variant="h2">
+                            Contact Us Today
+                        </Typography>
+
+                        <Typography variant="h6">
+                            To Start Your Journey Of A Lifetime
+                        </Typography>
+
+                        <Typography variant="p" className="text-gray-600">
+                            Step into a world of curated elegance, seamless service,
+                            and unforgettable destinations
+                        </Typography>
                     </div>
 
-                    <div className="flex flex-col justify-center items-center gap-8">
-                        <div className="flex justify-between items-center gap-6">
-                            <div className="border border-primary p-3 rounded-lg">
-                                <FiPhone size={34} color="#624A43" />
+                    {/* RIGHT CONTACT INFO */}
+                    <div className="flex flex-col gap-8">
 
-                            </div>
-                            <div>
-                                <Typography variant="p" className="!text-primary lg:!text-[20px] lg:w-60 ">+44 (0)203 595 1487</Typography>
-                            </div>
-
-                        </div>
-                        <div className="flex justify-between items-center gap-6">
-                            <div className="border border-primary p-3 rounded-lg">
-                                <CiMail size={34} color="#624A43" />
-
-                            </div>
-                            <div>
-                                <Typography variant="p" className="!text-primary lg:!text-[20px] lg:w-60 cursor-pointer underline">danny@mrluxurytravels.com</Typography>
+                        {/* PHONE */}
+                        <div className="flex items-start gap-4">
+                            <div className="border border-primary p-3 rounded-lg shrink-0">
+                                <FiPhone size={28} color="#624A43" />
                             </div>
 
-                        </div>
-                        <div className="flex justify-between items-center gap-6">
-                            <div className="border border-primary p-3 rounded-lg">
-                                <CiLocationOn size={34} color="#624A43" />
-
-                            </div>
-                            <div>
-                                <Typography variant="p" className="!text-primary lg:!text-[20px] lg:w-60 ">101 St Martin's Lane London,
-                                    WC2N 4AZ</Typography>
-                            </div>
-
+                            <Typography variant="p" className="!text-primary text-base md:text-lg">
+                                +44 (0)203 595 1487
+                            </Typography>
                         </div>
 
+                        {/* EMAIL */}
+                        <div className="flex items-start gap-4">
+                            <div className="border border-primary p-3 rounded-lg shrink-0">
+                                <CiMail size={28} color="#624A43" />
+                            </div>
+
+                            <Typography
+                                variant="p"
+                                className="!text-primary text-base md:text-lg underline cursor-pointer break-all"
+                            >
+                                danny@mrluxurytravels.com
+                            </Typography>
+                        </div>
+
+                        {/* ADDRESS */}
+                        <div className="flex items-start gap-4">
+                            <div className="border border-primary p-3 rounded-lg shrink-0">
+                                <CiLocationOn size={28} color="#624A43" />
+                            </div>
+
+                            <Typography variant="p" className="!text-primary text-base md:text-lg">
+                                101 St Martin's Lane London,
+                                WC2N 4AZ
+                            </Typography>
+                        </div>
 
                     </div>
+
                 </div>
-            </section >
+            </section>
         </>
     )
 }

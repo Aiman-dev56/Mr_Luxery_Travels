@@ -60,7 +60,7 @@ export default function BrandSlider() {
                                 <img
                                     src={brand.logo.src}
                                     alt={brand.name}
-                                    className="lg:w-[150px] 2xl:w-[200px] lg:h-[150px] 2xl:h-[200px] md:w-[100px] md:h-[100px] sm:w-[80px] sm:h-[80px] w-40 h-40 object-contain"
+                                    className="lg:w-[150px] 2xl:w-[200px]  lg:h-[150px] 2xl:h-[200px] md:w-[100px] md:h-[100px] sm:w-[40px] sm:h-[40px] w-32 h-32 object-contain"
                                 />
 
                             </div>

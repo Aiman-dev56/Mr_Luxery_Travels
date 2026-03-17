@@ -14,11 +14,11 @@ export default function About() {
                 {/* Text Section */}
                 <div className="lg:col-span-7 lg:pr-10">
 
-                    <Typography variant="h2">
+                    <Typography variant="h2" className="lg:w-160 md:w-100 w-64 ">
                         WELCOME TO MRLUXURYTRAVELS
                     </Typography>
 
-                    <Typography variant="p" className="!text-para mt-6 lg:w-160 w-100">
+                    <Typography variant="p" className="!text-para mt-6 lg:w-160 md:w-100 w-64">
                         Celebrating the French Art de Vivre in every detail, each
                         MRLUXURYTRAVELS Maison is a canvas where bold design meets the
                         soul of local craftsmanship. Serene havens unfold in harmony
@@ -54,18 +54,14 @@ export default function About() {
                     <ImageComp
                         src={Images.AboutImage2}
                         alt="About Image"
-                        className="absolute 
-            w-[100px] sm:w-[120px] lg:w-[140px]
-            top-[20px] md:right-[80px] sm:right-[80px] right-[40px] lg:right-[-40px]"
+                        className="absolute w-[100px] sm:w-[120px] lg:w-[140px] top-[10px] md:right-[80px] sm:right-[80px] right-[10px] lg:right-[-40px]"
                     />
 
                     {/* Bottom Floating Image */}
                     <ImageComp
                         src={Images.AboutImage3}
                         alt="About Image"
-                        className="absolute
-            w-[100px] sm:w-[120px] lg:w-[140px]
-            bottom-[20px] md:left-[80px] left-[20px] sm:left-[80px] lg:left-[-40px]"
+                        className="absolute w-[100px] sm:w-[120px] lg:w-[140px] bottom-[10px] md:left-[80px] left-[10px] sm:left-[80px] lg:left-[-40px]"
                     />
 
                 </div>

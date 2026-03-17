@@ -1,9 +1,13 @@
 "use client";
+
+import { useState } from "react";
 import Logo from "@/app/Assets/Images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../common/Button";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -11,69 +15,94 @@ import {
     DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
+} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
-    return (
-        <div>
-            <div className="sticky flex justify-between items-center px-10  h-[100px]">
-                <Link href="/">
-                    <Image
-                        src={Logo}
-                        alt="logo"
-                        width={150}
-                        height={200}
-                    /></Link>
+    const [open, setOpen] = useState(false);
 
-                <div className="flex gap-8 text-primary ">
-                    <ul className="list-none lg:flex   hidden gap-8 lg:mt-4">
+    return (
+        <div className="sticky top-0 z-50 bg-white">
+            <div className="flex justify-between items-center px-6 lg:px-10 h-[90px]">
+
+                {/* LOGO */}
+                <Link href="/">
+                    <Image src={Logo} alt="logo" width={150} height={200} />
+                </Link>
+
+                {/* DESKTOP MENU */}
+                <div className="hidden lg:flex gap-8 text-primary items-center">
+                    <ul className="flex gap-8">
                         <li>
-                            <Link href="/Pages/About" >About</Link>
+                            <Link href="/Pages/About">About</Link>
                         </li>
+
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <li>
-                                    <Link href="/Pages/Services">Services</Link>
+                                <li className="cursor-pointer">
+                                    Services
                                 </li>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent className="text-primary">
-                                <DropdownMenuGroup className="text-primary">
-                                    <DropdownMenuLabel className="text-primary">Travel</DropdownMenuLabel>
-                                    <DropdownMenuItem className="text-primary">Vip Service</DropdownMenuItem>
-                                    <DropdownMenuItem className="text-primary">LifeStyle</DropdownMenuItem>
-                                    <DropdownMenuItem className="text-primary">Shopping</DropdownMenuItem>
-                                    <DropdownMenuItem className="text-primary">Wellness</DropdownMenuItem>
-                                    <DropdownMenuItem className="text-primary">Personal</DropdownMenuItem>
-                                    <DropdownMenuItem>Families</DropdownMenuItem>
-                                    <DropdownMenuItem>Hot & New</DropdownMenuItem>
+
+                            <DropdownMenuContent>
+                                <DropdownMenuGroup>
+                                    <DropdownMenuLabel>Travel</DropdownMenuLabel>
+                                    <DropdownMenuItem>Vip Service</DropdownMenuItem>
+                                    <DropdownMenuItem>LifeStyle</DropdownMenuItem>
+                                    <DropdownMenuItem>Shopping</DropdownMenuItem>
+                                    <DropdownMenuItem>Wellness</DropdownMenuItem>
                                 </DropdownMenuGroup>
-
-
                             </DropdownMenuContent>
                         </DropdownMenu>
-                        <li>
-                            <Link href="/Pages/Contact" >Contact</Link>
-                        </li>
 
+                        <li>
+                            <Link href="/Pages/Contact">Contact</Link>
+                        </li>
                     </ul>
 
-                    <Button className="inline-flex gap-2 border lg:mt-1 !rounded-2xl bg-white !py-2 !px-4">
+                    <Button className="inline-flex gap-2 border !rounded-2xl bg-white !py-2 !px-4">
                         Eng
-                        <span>
-                            <RiArrowDropDownLine size={30} className="cursor-pointer" />
-                        </span>
+                        <RiArrowDropDownLine size={24} />
                     </Button>
-
-                    {/* mobile view */}
                 </div>
 
-
-
-
-
+                {/* MOBILE HAMBURGER */}
+                <div className="lg:hidden">
+                    {open ? (
+                        <HiOutlineX
+                            size={30}
+                            className="cursor-pointer"
+                            onClick={() => setOpen(false)}
+                        />
+                    ) : (
+                        <HiOutlineMenu
+                            size={30}
+                            className="cursor-pointer"
+                            onClick={() => setOpen(true)}
+                        />
+                    )}
+                </div>
             </div>
-        </div>
 
-    )
+            {/* MOBILE MENU PANEL */}
+            {open && (
+                <div className="absolute top-20 left-0 w-full bg-white  text-primary shadow-lg flex flex-col items-center gap-6 py-6 lg:hidden">
+                    <Link href="/Pages/About" onClick={() => setOpen(false)}>
+                        About
+                    </Link>
+
+                    <Link href="/Pages/Services" onClick={() => setOpen(false)}>
+                        Services
+                    </Link>
+
+                    <Link href="/Pages/Contact" onClick={() => setOpen(false)}>
+                        Contact
+                    </Link>
+
+                    <Button className="w-full border !rounded-xl bg-white !py-2">
+                        Eng
+                    </Button>
+                </div>
+            )}
+        </div>
+    );
 }
