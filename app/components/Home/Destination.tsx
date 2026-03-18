@@ -111,10 +111,11 @@ export default function Destinations() {
                         </div>
 
                         <div className="flex items-center">
-                            <button onClick={() => scroll("left")} disabled={!canScrollLeft} className="nav-btn w-12 opacity-80 hover:opacity-100 disabled:opacity-20">
-                                <Image src={Images.LeftButton} alt="prev" />
+                            <button onClick={() => scroll("left")} disabled={!canScrollLeft} className="nav-btn w-12 2xl:w-20 opacity-80 hover:opacity-100 disabled:opacity-20">
+                                <Image src={Images.LeftButton} alt="prev"
+                                />
                             </button>
-                            <button onClick={() => scroll("right")} disabled={!canScrollRight} className="nav-btn w-12 opacity-80 hover:opacity-100 disabled:opacity-20">
+                            <button onClick={() => scroll("right")} disabled={!canScrollRight} className="nav-btn w-12 2xl:w-20 opacity-80 hover:opacity-100 disabled:opacity-20">
                                 <Image src={Images.RightButton} alt="next" />
                             </button>
                         </div>

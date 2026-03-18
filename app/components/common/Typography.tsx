@@ -27,8 +27,8 @@ const sizes: Record<Variant, string> = {
     h3: "lg:text-2xl  text-xl first-letter:uppercase font-medium",
     h4: "2xl:text-[40px] lg:text-[30px] text-xl text-secondary first-letter:uppercase ",
     h6: "lg:text-[24px] 2xl:text-[34px] text-primary ",
-    p: "  leading-tight lg:text-[17px] 2xl:text-[20px] text-body  md:text-[12px] sm:text-[10px] text-[8px]",
-    subtitle: "2xl:text-[30px] md:text-[14px] sm:text-[12px] text-[10px] font-medium !text-secondary",
+    p: "  leading-tight lg:text-[16px] 2xl:text-[20px] text-body  md:text-[12px] sm:text-[10px] text-[8px]",
+    subtitle: "2xl:text-[30px] lg:text-[20px] md:text-[14px] sm:text-[12px] text-[10px] font-medium !text-secondary",
 };
 
 interface Props {

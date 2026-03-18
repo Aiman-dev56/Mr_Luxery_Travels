@@ -38,9 +38,12 @@ export default function Header() {
 
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <li className="cursor-pointer">
-                                    Services
-                                </li>
+                                <Link href="/Pages/Services">
+                                    <li className="cursor-pointer">
+                                        Services
+                                    </li>
+                                </Link>
+
                             </DropdownMenuTrigger>
 
                             <DropdownMenuContent>

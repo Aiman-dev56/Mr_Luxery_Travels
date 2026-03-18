@@ -7,17 +7,17 @@ import { Images } from "@/app/Assets/Images";
 
 export default function Destination() {
     return (
-        <section className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-20">
-                <div className="flex flex-col gap-4 mt-14">
+        <section className="container mx-auto px-4 lg:mt-14" id="destination">
+            <div className="grid grid-cols-2 lg:gap-8 gap-4 lg:mt-20 mt-10">
+                <div className="flex flex-col  lg:mt-20 mt-6">
                     <Typography variant="h2" className="w-40">Destination Inspiration</Typography>
-                    <Typography variant="p">Not sure where to go? MRLUXURYTRAVELS curates destination inspiration tailored to your desires, unveiling the world’s hottest hotels, hidden gems, and unique escapes designed to spark your imagination and wanderlust.</Typography>
+                    <Typography variant="p" className="lg:w-140 w-40 mt-2 mb-8">Not sure where to go? MRLUXURYTRAVELS curates destination inspiration tailored to your desires, unveiling the world’s hottest hotels, hidden gems, and unique escapes designed to spark your imagination and wanderlust.</Typography>
 
                 </div>
                 <div>
                     <ImageComp
                         src={Images.DestImage}
-                        className="w-full object-cover h-[400px] 2xl:w-[1960px] 2xl:h-[400px]  lg:h-[300px] rounded-lg"
+                        className="lg:w-[600px] lg:h-[300px] 2xl:w-[900px] 2xl:h-[400px] md:w-[500px] md:h-[250px] sm:w-[300px] sm:h-[300px] rounded-lg lg:mt-0 mt-8"
                     />
                 </div>
 

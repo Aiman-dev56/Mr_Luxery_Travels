@@ -14,7 +14,7 @@ export default function Footer() {
     return (
         <div className="container">
             <section className="mt-20 w-full flex justify-center px-4">
-                <div className="relative  max-w-[1200px] rounded-xl overflow-hidden">
+                <div className="relative w-full max-w-[1200px] lg:max-w-[1400px] 2xl:max-w-[1098px] rounded-xl overflow-hidden">
 
                     <Image
                         src={Images.FooterBg}
@@ -24,35 +24,37 @@ export default function Footer() {
                         className="object-cover object-center"
                     />
 
-                    <div className="relative grid md:grid-cols-2 gap-8 px-6 py-12 lg:py-16 2xl:py-20">
+                    <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr] gap-20 px-6 py-12 lg:px-16 lg:py-16 2xl:px-20 2xl:py-20">
 
-                        <div className="max-w-xl">
+                        {/* TEXT */}
+                        <div className="w-full">
                             <Typography variant="h2" className="!text-white">
                                 Don't Miss A Thing
                             </Typography>
 
-                            <Typography variant="p" className="!text-white mt-2">
+                            <Typography variant="p" className="!text-white mt-3 max-w-2xl">
                                 Get essential travel tips, destination inspiration,
                                 itineraries, and the best places to stay in your inbox.
                             </Typography>
 
-                            <Typography variant="p" className="mt-6 !text-white !font-bold">
+                            <Typography variant="p" className="mt-6 !text-white font-bold">
                                 Sign up to the Mr Luxury Travels Newsletter.
                             </Typography>
                         </div>
 
-                        <div className="flex flex-col gap-4 max-w-md md:ml-auto">
+                        {/* FORM */}
+                        <div className="flex flex-col gap-5 w-full max-w-md md:ml-auto mt-10">
                             <input
                                 placeholder="Full Name"
-                                className="border border-white/60 bg-transparent px-4 py-3 italic placeholder:text-white rounded-lg w-full"
+                                className="border border-white/60 bg-transparent px-5 py-4 italic placeholder:text-white rounded-lg w-full"
                             />
 
                             <input
                                 placeholder="Email"
-                                className="border border-white/60 bg-transparent px-4 py-3 italic placeholder:text-white rounded-lg w-full"
+                                className="border border-white/60 bg-transparent px-5 py-4 italic placeholder:text-white rounded-lg w-full"
                             />
 
-                            <button className="bg-secondary text-primary px-6 py-3 rounded-lg w-fit self-end">
+                            <button className="bg-secondary text-primary px-8 py-3 rounded-lg w-full sm:w-fit sm:self-end">
                                 Subscribe
                             </button>
                         </div>
@@ -62,7 +64,7 @@ export default function Footer() {
             </section>
 
             <footer className="mt-[-80px] lg:mt-[-70px]">
-                <div className="bg-background rounded-xl pt-24 pb-10 max-w-[1200px] mx-auto">
+                <div className="bg-background rounded-xl pt-24 pb-10  max-w-[1200px] mx-auto">
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 lg:px-16">
 
